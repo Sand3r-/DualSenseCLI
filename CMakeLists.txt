@@ -23,8 +23,6 @@ else()
     message(FATAL_ERROR "Windows HID wasn't found. Aborting...")
 endif()
 
-message(WARNING ${WINHID_LIBRARIES})
-
 # Link HID to the project
 target_include_directories(${TARGET_NAME} PRIVATE ${WINHID_INCLUDE_DIRS})
 target_link_libraries(${TARGET_NAME} PRIVATE ${WINHID_LIBRARIES})
